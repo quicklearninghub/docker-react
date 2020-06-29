@@ -1,9 +1,10 @@
+language: generic
 sudo: required
 services:
     - docker
 
 before_install:
-    - docker build -t docker-react -f Dockerfile.dev .
+    - docker build -t arpitarora/docker-react -f Dockerfile.dev .
 
 script:
-    - docker run -e docker-react npm run test
+    - docker run -e arpitarora/docker-react npm run test
